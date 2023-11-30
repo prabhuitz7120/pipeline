@@ -6,7 +6,8 @@ pipeline {
             steps {
                 echo 'Building..'
             steps {
-            sh 'docker images'
+            sh """#!/bin/bash
+            ls -l
         }
             }
         }
