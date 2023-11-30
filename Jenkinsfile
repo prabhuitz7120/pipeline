@@ -5,7 +5,9 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                docker compose -f docker-compose-quickstart.yml up -d
+            steps {
+            sh 'docker images'
+        }
             }
         }
         stage('Test') {
