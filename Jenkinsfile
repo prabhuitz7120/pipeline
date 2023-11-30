@@ -4,12 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
-            steps {
-            sh """#!/bin/bash
-            ls -l
-        }
-            }
+                sh './docker-compose-quickstart.yml'
+
         }
         stage('Test') {
             steps {
