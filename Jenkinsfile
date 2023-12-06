@@ -10,7 +10,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                docker images
+                docker ps -a
             }
         }
         stage('Deploy') {
